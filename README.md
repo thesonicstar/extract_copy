@@ -7,7 +7,7 @@ Set-StrictMode -Version latest
 #----------------------------------------------------------
 #STATIC VARIABLES
 #----------------------------------------------------------
-$search = ".###"                       #file type
+$search = ".jpg"                       #file type
 $dest   = "D:\####\####\####\"               #destination
 $zips   = "D:\####\####\####\"           #Source
 
@@ -81,9 +81,9 @@ GetZipFiles
 #Finished
 
 #----------------------------------------------------------
-# Search and Copy .tpe file
+# Search and Copy .jpg file
 #----------------------------------------------------------
-#Searches below directory for .TPE files and copies files written in the last 600 minutes
+#Searches below directory for .JPG files and copies files written in the last 720 minutes
 
 Get-ChildItem -Path "D:\####\###\####\" -Filter *.jpg* -Recurse| ? {$_.LastWriteTime -gt (Get-Date).AddMinutes(-720)} |
 #Copy .tpe files to below location
